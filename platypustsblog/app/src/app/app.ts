@@ -1,6 +1,6 @@
 import {App, events, register, routing} from 'platypus';
 import HomeViewControl from '../viewcontrols/home/home.vc';
-import newpostControl from '../viewcontrols/post/post.vc';
+import newpostViewControl from '../viewcontrols/post/post.vc';
 
 export default class MyApp extends App {
     constructor(router: routing.Router) {
@@ -8,7 +8,7 @@ export default class MyApp extends App {
 
         router.configure([
             { pattern: '', view: HomeViewControl },
-            { pattern: 'newpost', view: newpostControl }
+            { pattern: 'newpost', view: newpostViewControl }
         ]);
     }
 
