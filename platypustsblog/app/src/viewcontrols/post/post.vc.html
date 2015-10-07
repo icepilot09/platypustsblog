@@ -1,1 +1,13 @@
-<h1>post.html</h1>
+<h1>Write Your Blog!</h1>
+
+<div>
+	<plat-input plat-bind="#" placeholder="title"></plat-input>
+	<br>
+	<plat-input plat-bind="#" placeholder="author"></plat-input>
+	<br>
+	<br>
+	<br>
+	<textarea placeholder="Write Blog" rows="6" cols="100" plat-bind="post.content"></textarea>
+</div>
+<br>
+<plat-button class="button-primary gs-button" plat-tap="post">Submit Blog</plat-button>
