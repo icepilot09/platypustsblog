@@ -12,10 +12,17 @@ export default class BlogRepository extends BaseRepository {
 	};
 
 
-	posts: Array<any>;
+	posts: Array<any> = [];
 	getPosts(): async.IThenable<Array<models.IPost>> {
-
-		return this.blogService.getPosts();
+		
+		return this.blogService.getPosts().then((results) => {
+			results.forEach((result) => {
+				this.posts.push(result);
+			})
+			return this.posts.reverse();
+		})
+		
+		
 	};
 }
 
